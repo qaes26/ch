@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح المحور الخامس: الأمن الوطني الأردني وتحدياته - قيس الجازي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #050505; /* Even deeper dark background */
+            color: #e0e0e0; /* Lighter text for contrast */
+            line-height: 1.7;
+            scroll-behavior: smooth;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #050505;
+            background-image: url(''); /* No image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
+            border-bottom: 5px solid #FFD700;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            animation: fadeInDown 1s ease-out forwards;
+            position: relative; /* For the subtle glow */
+            overflow: hidden;
+            border-radius: 1.5rem; /* More rounded */
+        }
+        .header-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent 70%);
+            animation: pulseGlow 10s infinite alternate;
+            z-index: -1;
+        }
+
+        .section-card {
+            background-color: #1a1a1a;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent; /* For glow effect */
+            background-clip: padding-box; /* Important for glow */
+        }
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px; /* For border glow */
+            border-radius: inherit;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+            filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.4s ease-out;
+        }
+        .section-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
+        }
+        .section-card:hover::before {
+            opacity: 0.3; /* Subtle glow on hover */
+        }
+
+        .gold-heading {
+            color: #FFD700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 5px rgba(255, 215, 0, 0.5);
+            font-weight: 900; /* Extra bold */
+        }
+        .list-item {
+            background-color: #2a2a2a; /* Slightly lighter for distinction */
+            border-right: 5px solid;
+            border-image: linear-gradient(to top, #FFD700, #FFA500) 1;
+            padding: 1.2rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .list-item:hover {
+            background-color: #383838;
+            transform: translateX(-5px);
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #0a0a0a;
+            font-weight: 900;
+            padding: 1rem 3rem;
+            border-radius: 9999px;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 45px rgba(255, 215, 0, 0.8);
+            filter: brightness(1.2);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            transition: all 0.6s ease-out;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: -1;
+        }
+        .btn-primary:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .quiz-option {
+            background-color: #242424;
+            border: 1px solid #3a3a3a;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 0.75rem;
+            position: relative;
+            overflow: hidden;
+            padding: 1rem 1.5rem;
+        }
+        .quiz-option:hover {
+            background-color: #2f2f2f;
+            border-color: #FFD700;
+        }
+        .quiz-option.selected {
+            background-color: #3b3000;
+            border-color: #FFD700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+        .quiz-option.correct {
+            background-color: #1e3d2a;
+            border-color: #38a169;
+            box-shadow: 0 0 15px rgba(56, 161, 105, 0.6);
+        }
+        .quiz-option.incorrect {
+            background-color: #4b2c2c;
+            border-color: #e53e3e;
+            box-shadow: 0 0 15px rgba(229, 62, 62, 0.6);
+        }
+        .radio-custom {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #888;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1rem;
+            flex-shrink: 0;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+        .quiz-option.selected .radio-custom {
+            border-color: #FFD700;
+            background-color: #FFD700;
+        }
+        .quiz-option.selected .radio-custom::after {
+            content: '';
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #050505;
+            border-radius: 50%;
+        }
+        #quizProgress {
+            width: 100%;
+            background-color: #1a1a1a;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            height: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+            border: 1px solid #3a3a3a;
+        }
+        #quizProgressBar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            border-radius: 0.75rem;
+            transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a0a0a;
+            font-weight: 900;
+            font-size: 1rem;
+            text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-80px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0% { transform: scale(0.8) rotate(0deg); opacity: 0.1; }
+            50% { transform: scale(1.2) rotate(10deg); opacity: 0.25; }
+            100% { transform: scale(0.8) rotate(0deg); opacity: 0.1; }
+        }
+
+        .question-block {
+            padding: 2.5rem;
+            border-bottom: 1px solid #2f2f2f;
+            margin-bottom: 2.5rem;
+            background-color: #1a1a1a; /* Ensure consistency */
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .question-block:last-of-type {
+            border-bottom: none;
+        }
+        /* Scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #FFA500, #FFD700);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-bg h1 {
+                font-size: 2.8rem;
+            }
+            .header-bg h2 {
+                font-size: 2rem;
+            }
+            .btn-primary {
+                padding: 0.9rem 2.2rem;
+                font-size: 0.9rem;
+            }
+            .section-card {
+                padding: 1.5rem;
+                border-radius: 1rem;
+            }
+            .list-item {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+            .question-block {
+                padding: 1.8rem;
+            }
+            .quiz-option {
+                padding: 0.9rem;
+                font-size: 0.9rem;
+            }
+            .radio-custom {
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-left: 0.8rem;
+            }
+            .quiz-option.selected .radio-custom::after {
+                width: 0.6rem;
+                height: 0.6rem;
+            }
+            #quizProgress {
+                height: 1.5rem;
+            }
+            #quizProgressBar {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="particles-js"></div>
+    <div class="container mx-auto p-4 md:p-8 relative z-10">
+        <!-- Header Section -->
+        <header class="text-center mb-16 p-8 rounded-xl header-bg">
+            <h1 class="text-4xl md:text-6xl font-extrabold gold-heading mb-4">شرح المحور الخامس الكامل</h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-200">الأمن الوطني الأردني وتحدياته</h2>
+            <p class="mt-6 text-lg text-gray-400">إعداد وتقديم الطالب: <strong class="gold-heading">قيس طلال الجازي</strong></p>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main id="summaryContent" class="space-y-12 mb-12">
+            <div class="section-card p-6 md:p-10 fade-in" style="animation-delay: 0.2s;">
+                <h3 class="text-3xl font-bold gold-heading mb-6 border-b-2 border-amber-500 pb-4">مفهوم الأمن الوطني ونشأته</h3>
+                <p class="mb-6 text-lg text-gray-300">يُعد مفهوم الأمن الوطني ركيزة أساسية في بناء الدول الحديثة واستقرارها. تاريخياً، تُعتبر <strong class="gold-heading">معاهدة وستفاليا عام 1648م</strong> نقطة تحول حاسمة، حيث أدت إلى ترسيخ مبدأ سيادة الدول القومية والحدود الثابتة، مما جعل لكل دولة اهتماماً خاصاً بحماية كيانها ومصالحها. لم يظهر المصطلح بشكل رسمي إلا بعد قرون، حيث كان أول استعمال رسمي لمفهوم الأمن الوطني في أعقاب الحرب العالمية الثانية عام 1947م، حين أدركت الدول أهمية حماية مصالحها الشاملة ليس فقط عسكرياً بل أيضاً اقتصادياً واجتماعياً لمواجهة التحديات الجديدة التي فرضتها طبيعة الصراعات الحديثة.</p>
+            </div>
+
+            <div class="section-card p-6 md:p-10 fade-in" style="animation-delay: 0.4s;">
+                <h3 class="text-3xl font-bold gold-heading mb-6 border-b-2 border-amber-500 pb-4">لماذا الإعداد للأمن الوطني؟</h3>
+                <p class="mb-6 text-lg text-gray-300">الإعداد الشامل للأمن الوطني ليس مجرد خيار، بل ضرورة حتمية لأي دولة تسعى إلى الاستقرار والازدهار. تتجلى أهمية هذا الإعداد في عدة جوانب محورية:</p>
+                <ul class="space-y-4">
+                    <li class="list-item flex items-center">
+                        <span class="w-2 h-2 bg-amber-400 rounded-full ml-3 flex-shrink-0"></span>
+                        <span class="text-gray-300"><strong>تحقيق المصلحة الوطنية العليا:</strong> الأمن الوطني يضمن قدرة الدولة على اتخاذ قراراتها بحرية وحماية مواردها وشعبها، مما يقود لتحقيق الأهداف الاستراتيجية التي تعود بالنفع على الجميع.</span>
+                    </li>
+                    <li class="list-item flex items-center">
+                        <span class="w-2 h-2 bg-amber-400 rounded-full ml-3 flex-shrink-0"></span>
+                        <span class="text-gray-300"><strong>تهيئة الطمأنينة للمواطنين:</strong> عندما يشعر المواطن بالأمان على نفسه، أسرته، وممتلكاته، فإنه ينعكس إيجاباً على إنتاجيته ومشاركته الفاعلة في بناء المجتمع.</span>
+                    </li>
+                    <li class="list-item flex items-center">
+                        <span class="w-2 h-2 bg-amber-400 rounded-full ml-3 flex-shrink-0"></span>
+                        <span class="text-gray-300"><strong>يعتبر أساس استقلال الدولة وتطورها:</strong> الدولة التي تفتقر إلى الأمن الوطني لا يمكنها الحفاظ على سيادتها أو المضي قدماً في خطط التنمية، فهي ستكون عرضة للتدخلات الخارجية والاضطرابات الداخلية.</span>
+                    </li>
+                    <li class="list-item flex items-center">
+                        <span class="w-2 h-2 bg-amber-400 rounded-full ml-3 flex-shrink-0"></span>
+                        <span class="text-gray-300"><strong>يعد من دعائم تحقيق التقدم والتنمية الاقتصادية والاجتماعية والسياسية:</strong> الاستقرار الأمني يوفر البيئة الجاذبة للاستثمارات، ويشجع على الابتكار، ويدعم المشاركة السياسية، مما يؤدي إلى نهضة شاملة في كافة القطاعات.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section-card p-6 md:p-10 fade-in" style="animation-delay: 0.6s;">
+                <h3 class="text-3xl font-bold gold-heading mb-6 border-b-2 border-amber-500 pb-4">أنواع وأبعاد الأمن الوطني</h3>
+                <p class="mb-6 text-lg text-gray-300">الأمن الوطني ليس بعداً واحداً، بل هو شبكة معقدة ومتكاملة من الأبعاد التي تتفاعل لتشكل مظلة حماية شاملة للدولة والمجتمع:</p>
+                <div class="space-y-8">
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="shield-check" class="w-6 h-6 ml-3 text-amber-400"></i>1. الأمن العسكري:</h4>
+                        <p class="text-gray-300">يُعد الأمن العسكري العمود الفقري للأمن الوطني، وهو الأكثر فعالية وأهمية في ردع أي عدوان خارجي أو داخلي. تُقاس قوته وتأثيره بعدة مؤشرات رئيسية:</p>
+                        <ul class="list-disc list-inside space-y-1 mt-2 pr-4 text-gray-400">
+                            <li><strong>حجم القوات المسلحة:</strong> يعكس القدرة البشرية للدفاع عن الوطن.</li>
+                            <li><strong>مستوى التدريب والتسليح:</strong> يحدد جاهزية القوات وقدرتها على التعامل مع التهديدات الحديثة.</li>
+                            <li><strong>المرونة والخبرة القتالية والتعبئة والإنتاج الحربي:</strong> مؤشرات على كفاءة الجيش وقدرته على الاستجابة السريعة وتوفير احتياجاته الدفاعية ذاتياً.</li>
+                            <li><strong>الأحلاف العسكرية:</strong> توفر دعماً استراتيجياً وتعزز القدرة على الردع المشترك.</li>
+                        </ul>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="building" class="w-6 h-6 ml-3 text-amber-400"></i>2. الأمن الاقتصادي:</h4>
+                        <p class="text-gray-300">يُعتبر الأمن الاقتصادي حجر الزاوية للاستقرار الشامل، فهو يضمن قدرة الدولة على توفير الموارد اللازمة لشعبها واستقلال قرارها الاقتصادي. ينقسم إلى أبعاد داخلية وخارجية:</p>
+                        <p class="text-gray-300"><strong class="text-amber-300">الأبعاد الداخلية:</strong> تشمل التنمية البشرية، تأمين الاقتصاد وموارده ضد التهديدات، تحقيق التوازن بين الموارد المتاحة وحاجات السكان، الاستغلال الأمثل للموارد الطبيعية والبشرية، محاربة الفقر والبطالة كعوامل مهددة للاستقرار، ضبط الأسعار لضمان القدرة الشرائية للمواطن، ومواءمة مخرجات التعليم مع متطلبات سوق العمل لتعزيز الإنتاجية الوطنية.</p>
+                        <p class="mt-2 text-gray-300"><strong class="text-amber-300">الأبعاد الخارجية:</strong> تهدف إلى التخلص من التبعية الاقتصادية للدول الأخرى، بحيث يكون الاقتراض الخارجي فقط عند الحاجة القصوى وبشروط مناسبة، وانتهاج سياسة الاعتماد على الذات في توفير الاحتياجات الأساسية بدلاً من الاعتماد المفرط على المساعدات الخارجية التي قد تؤثر على القرار السيادي.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="users" class="w-6 h-6 ml-3 text-amber-400"></i>3. الأمن الاجتماعي:</h4>
+                        <p class="text-gray-300">هو قدرة الدولة على حماية قيمها الاجتماعية الأصيلة وتقاليدها من التهديدات الخارجية التي قد تسعى إلى تفكيك النسيج المجتمعي. يرتبط هذا الأمن ارتباطاً وثيقاً بتعزيز الوحدة الوطنية بين أبناء الوطن الواحد، ودعم الإرادة الوطنية في مواجهة التحديات المشتركة، مما يخلق مجتمعاً متماسكاً وقادراً على الصمود.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="gavel" class="w-6 h-6 ml-3 text-amber-400"></i>4. الأمن السياسي:</h4>
+                        <p class="text-gray-300">يرتبط الأمن السياسي ارتباطاً وثيقاً بحرية الإرادة الوطنية وقدرة الدولة على اتخاذ وصنع القرارات السياسية بشكل مستقل، دون ضغوط أو تدخلات خارجية. الهدف الأساسي هو حماية مصالح الدولة وسيادتها من أي تدخل أجنبي قد يمس بقرارها الحر أو يهدد استقرارها الداخلي.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="book" class="w-6 h-6 ml-3 text-amber-400"></i>5. الأمن الثقافي:</h4>
+                        <p class="text-gray-300">يعنى الأمن الثقافي بالحفاظ على المكونات الثقافية الأصيلة للمجتمع وهويته الوطنية، في مواجهة التيارات الثقافية الوافدة التي قد تحمل قيماً غريبة أو تسعى إلى طمس الهوية. يتضمن ذلك حماية اللغة، التراث، الفنون، والعادات والتقاليد التي تشكل جوهر الحضارة الوطنية.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="globe" class="w-6 h-6 ml-3 text-amber-400"></i>6. الأمن الوطني الشامل:</h4>
+                        <p class="text-gray-300">يُعد الأمن الوطني الشامل مفهوماً متكاملاً يجمع بين جميع الأبعاد المذكورة. يتحقق بوجود نظام سياسي متوازن قادر على إدارة الدولة بكفاءة، ونظام اقتصادي فعال يضمن الاستقرار والنمو، وعلاقات اجتماعية قوية قائمة على العدالة والمساواة وتكافؤ الفرص بين جميع المواطنين، مما يخلق بيئة متناغمة ومحصنة ضد التحديات.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card p-6 md:p-10 fade-in" style="animation-delay: 0.8s;">
+                <h3 class="text-3xl font-bold gold-heading mb-6 border-b-2 border-amber-500 pb-4">الأمن الوطني الأردني</h3>
+                <p class="mb-6 text-lg text-gray-300">في السياق الأردني، يتسم الأمن الوطني بخصائصه الفريدة التي تشكلت بفعل التفاعلات البيئية المحلية والإقليمية والدولية. يُعرف الأمن الوطني الأردني بأنه التعبير السياسي والاجتماعي عن الحالة الحقيقية التي يعيشها المجتمع، ويقوم على أسس ومرتكزات قوية:</p>
+                <div class="space-y-4 text-gray-300">
+                    <p><strong class="text-amber-300">التعريف:</strong> هو التعبير السياسي والاجتماعي عن الحالة الحقيقية التي يعيشها المجتمع الأردني نتيجة للتفاعلات البيئية المحلية والإقليمية والدولية. هذا التعريف يعكس طبيعة الأردن كدولة متأثرة بما يحيط بها، ولكنها قادرة على التكيف وحماية ذاتها.</p>
+                    <p><strong class="text-amber-300">الأسس والمرتكزات:</strong> تشمل منعة المجتمع الأردني وقدرته على الصمود، ضمان أمن الشعب وحريته كحق أساسي، توفير مقومات الحياة الكريمة للمواطن لضمان استقراره، وتحقيق الاستقرار النفسي للمواطن الذي ينعكس إيجاباً على ولاءه وإنتاجيته.</p>
+                    <p><strong class="text-amber-300">الأولويات الداخلية:</strong> تركز على تعزيز الجبهة الداخلية من خلال: الرسالة القومية للدولة الأردنية التي تؤكد على دورها الريادي، تماسك الجبهة الداخلية ورسوخها عبر الوحدة الوطنية، تأصيل مفهوم دولة المؤسسات والقانون لضمان العدالة، السعي لتحقيق التنمية الشاملة في كافة القطاعات، والثقة بقدرات المواطن الأردني وإمكانياته كشريك أساسي في بناء الوطن.</p>
+                    <p><strong class="text-amber-300">الأولويات الخارجية:</strong> تتأثر بالبيئة الإقليمية المعقدة وتشمل: العمل على إقامة الدولة الفلسطينية المستقلة وعاصمتها القدس الشريف كقضية مركزية للأردن، التصدي لظاهرة الإرهاب العابرة للحدود، دعم الحل السياسي للأزمة السورية لضمان أمن الحدود، تطوير العلاقات الأردنية العراقية لتعزيز الروابط الاقتصادية والأمنية، والتعامل بحكمة مع ملف الحل النووي الإيراني بما يخدم أمن المنطقة.</p>
+                </div>
+            </div>
+
+            <div class="section-card p-6 md:p-10 fade-in" style="animation-delay: 1s;">
+                <h3 class="text-3xl font-bold gold-heading mb-6 border-b-2 border-amber-500 pb-4">دور المؤسسات الوطنية في تحقيق الأمن الوطني</h3>
+                <p class="mb-6 text-lg text-gray-300">تعتبر المؤسسات الوطنية الدرع الحامي للأمن الوطني، حيث تعمل كل منها ضمن اختصاصها لتأمين استقرار البلاد وحماية مصالحها. من أبرز هذه المؤسسات:</p>
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-2xl font-bold gold-heading mb-4 flex items-center"><i data-lucide="military-helmet" class="w-6 h-6 ml-3 text-amber-400"></i>أ. المؤسسات العسكرية:</h4>
+                        <ul class="space-y-3 pr-4">
+                            <li class="list-item"><strong>القوات المسلحة (الجيش العربي):</strong> لا يقتصر دورها على الدفاع العسكري، بل يشمل أيضاً توفير الرعاية الصحية والتعليم للمواطنين، تنفيذ عمليات الإنقاذ والإخلاء في الظروف الاستثنائية والكوارث، المشاركة الفاعلة في قوات حفظ السلام الدولية لتعزيز الأمن الإقليمي والدولي، والمساهمة في المشاريع التنموية الزراعية مثل شق الطرق واستصلاح الأراضي وبناء السدود الترابية، مما يعزز الأمن الغذائي والاقتصادي.</li>
+                            <li class="list-item"><strong>مديرية الأمن العام:</strong> تعمل على حفظ النظام والأمن الداخلي، حماية الأرواح والممتلكات من الجرائم، ومنع الجرائم وكشفها. لها دور اجتماعي حيوي من خلال إدارات متخصصة مثل حماية الأسرة، مكافحة المخدرات، والشرطة المجتمعية التي تعزز التواصل مع المواطنين لحل المشكلات المجتمعية.</li>
+                            <li class="list-item"><strong>دائرة المخابرات العامة:</strong> جهاز حيوي مسؤول عن جمع وتحليل المعلومات الاستخباراتية الاستباقية، مقاومة التخريب الفكري والمادي الذي يهدد استقرار الدولة، ومكافحة التجسس، وهي مهام بالغة الأهمية للحفاظ على سرية المعلومات الحيوية وحماية القرار الوطني.</li>
+                            <li class="list-item"><strong>المديرية العامة للدفاع المدني:</strong> تتولى مسؤولية توفير وسائل الإنذار المبكر من المخاطر المختلفة، التحقق من متطلبات الوقاية والسلامة العامة، والإشراف على المنشآت الخطرة لضمان تطبيق معايير الأمان، بالإضافة إلى عمليات الإطفاء والإنقاذ والإسعاف في الحالات الطارئة.</li>
+                            <li class="list-item"><strong>المديرية العامة لقوات الدرك:</strong> (تأسست عام 2007) تعمل على فرض القانون والنظام العام، تأمين الحماية اللازمة للهيئات الدبلوماسية والمنشآت الحيوية، وتقديم الإسناد اللازم للأجهزة الأمنية الأخرى في مختلف الظروف، مما يعزز قدرة الدولة على بسط سيطرتها.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold gold-heading mb-4 flex items-center"><i data-lucide="banknote" class="w-6 h-6 ml-3 text-amber-400"></i>ب. المؤسسات الاقتصادية:</h4>
+                        <ul class="space-y-3 pr-4">
+                            <li class="list-item"><strong>وزارة الصناعة والتجارة:</strong> تساهم في تنمية وتطوير الصناعات المحلية لزيادة تنافسيتها، تحسين التجارة الخارجية من حيث السلع والخدمات، ومراقبة وتنظيم التجارة الداخلية والخارجية لضمان استقرار الأسواق وحماية المستهلك.</li>
+                            <li class="list-item"><strong>وزارة المالية:</strong> مسؤولة عن وضع السياسة المالية للدولة، تحصيل الإيرادات العامة وإدارتها بكفاءة، وإدارة الدين العام (الداخلي والخارجي) لضمان الاستقرار المالي للدولة.</li>
+                            <li class="list-item"><strong>وزارة التخطيط والتعاون الدولي:</strong> تضع الخطط التنموية على المدى الطويل والمتوسط (مثل الخطط الوظيفية)، وتضع السياسات اللازمة لمعالجة الاختلالات في التنمية الشاملة، وتسعى لتوفير التمويل اللازم (قروض ميسرة، منح، مساعدات) للمشاريع التنموية.</li>
+                            <li class="list-item"><strong>وزارة الزراعة:</strong> تساهم من خلال مؤسساتها (مثل مؤسسة الإقراض الزراعي) في تمويل مشاريع إدخال التكنولوجيا الحديثة، تشجيع الزراعات المحمية والتقنيات الحديثة، وتمويل استصلاح الأراضي الزراعية لزيادة الإنتاج المحلي وتحقيق الأمن الغذائي.</li>
+                            <li class="list-item"><strong>وزارة المياه والري:</strong> من الوزارات الحيوية نظراً لشح المياه في الأردن، وتضم سلطة المياه وسلطة وادي الأردن، وتعمل على إدارة الموارد المائية وتوفيرها للاستخدامات المختلفة.</li>
+                            <li class="list-item"><strong>وزارة الطاقة والثروة المعدنية:</strong> تهدف إلى توفير النفط الخام والمشتقات النفطية اللازمة بأقل التكاليف، وضمان توفير الطاقة الكهربائية باستمرار، وتخفيف أعباء كلفة صناعة واستيراد الطاقة عن موازنة الدولة من خلال تنويع المصادر.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold gold-heading mb-4 flex items-center"><i data-lucide="graduation-cap" class="w-6 h-6 ml-3 text-amber-400"></i>ج. المؤسسات التربوية والتعليمية:</h4>
+                        <ul class="space-y-3 pr-4">
+                            <li class="list-item">تتضمن وزارة التربية والتعليم (المدارس بكافة مراحلها) ووزارة التعليم العالي والبحث العلمي (الجامعات والمعاهد).</li>
+                            <li class="list-item">تلعب دوراً محورياً في تنمية الموارد البشرية من خلال استراتيجيات مثل "الاستراتيجية الوطنية لتنمية الموارد البشرية 2016-2025"، التي تهدف إلى تعزيز القدرات البشرية في مختلف المجالات، مما يساهم في تحقيق التنمية المستدامة والتقدم الشامل للدولة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card p-6 md:p-10 fade-in" style="animation-delay: 1.2s;">
+                <h3 class="text-3xl font-bold gold-heading mb-6 border-b-2 border-amber-500 pb-4">التحديات المعاصرة</h3>
+                <p class="mb-6 text-lg text-gray-300">يواجه الأمن الوطني الأردني مجموعة من التحديات المعاصرة والمتجددة، التي تتطلب استراتيجيات شاملة ومستمرة للتكيف والمواجهة:</p>
+                <div class="space-y-8">
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="trending-down" class="w-6 h-6 ml-3 text-amber-400"></i>أ. التحديات الاقتصادية:</h4>
+                        <ul class="list-disc list-inside space-y-1 mt-2 pr-4 text-gray-300">
+                            <li><strong>البطالة:</strong> تحدٍ كبير، حيث بلغ معدلها 18.4% عام 2018. أسبابها متعددة تشمل العزوف عن التشغيل الذاتي، عدم مواءمة مخرجات التعليم مع سوق العمل، ارتفاع معدلات النمو السكاني، ازدياد معدلات العمالة الوافدة، وقلة الموارد الطبيعية، بالإضافة إلى عدم الاستقرار السياسي في بعض دول الجوار.</li>
+                            <li><strong>ندرة الطاقة:</strong> تشكل عبئاً كبيراً على الاقتصاد الأردني، وتسعى الأردن لتنويع مصادر الطاقة وزيادة نسبة المصادر المحلية في مزيج الطاقة الكلي (رؤية 2025).</li>
+                            <li><strong>المديونية:</strong> تحدٍ مستمر يضغط على الموازنة العامة، وقد حصل الأردن على أول قرض خارجي من بريطانيا عام 1978.</li>
+                            <li><strong>انخفاض حجم المساعدات الخارجية:</strong> يؤثر على قدرة الدولة على تنفيذ المشاريع التنموية.</li>
+                            <li><strong>استمرار سياسة فرض الضرائب:</strong> قد يؤثر على القدرة الشرائية للمواطنين والقطاع الخاص.</li>
+                            <li><strong>ضغط اللجوء على الموازنة:</strong> استضافة اللاجئين تضع أعباء إضافية على البنية التحتية والخدمات والموازنة.</li>
+                        </ul>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="landmark" class="w-6 h-6 ml-3 text-amber-400"></i>ب. التحديات السياسية:</h4>
+                        <ul class="list-disc list-inside space-y-1 mt-2 pr-4 text-gray-300">
+                            <li><strong>الإرهاب:</strong> ظاهرة عالمية تهدد الأمن والاستقرار، والأردن في طليعة الدول المكافحة لها.</li>
+                            <li><strong>الصراع الإقليمي:</strong> يشمل قضايا محورية كالقضية الفلسطينية و"الخطر الصهيوني" ومفهوم الوطن البديل، بالإضافة إلى الأزمة السورية وتداعياتها، والدور الإيراني المتنامي في المنطقة.</li>
+                            <li><strong>ضرورة الحفاظ على الوحدة الوطنية:</strong> تحدٍ أساسي يتطلب تعزيز روح المواطنة والولاء والانتماء واحترام حقوق المواطنين.</li>
+                            <li><strong>استمرار مسيرة التحول الديمقراطي:</strong> يتطلب مواجهة التحديات من خلال نظام حكم وثقافة سياسية ديمقراطية، ومنهجية لإدارة الصراعات الاجتماعية والسياسية بطرق سلمية.</li>
+                        </ul>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="handshake" class="w-6 h-6 ml-3 text-amber-400"></i>ج. التحديات الاجتماعية:</h4>
+                        <ul class="list-disc list-inside space-y-1 mt-2 pr-4 text-gray-300">
+                            <li><strong>الفقر:</strong> بنوعيه، الفقر المطلق (عدم قدرة الفرد على إشباع الحد الأدنى من حاجاته الغذائية) والفقر المدقع (عدم قدرته على إشباع الحد الأدنى من حاجاته الأساسية كالغذاء والسكن). وزارة التنمية الاجتماعية هي الجهة الحكومية المختصة بالحد من هذه الظاهرة.</li>
+                            <li><strong>ضرورة إصلاح وتحديث منظومة القيم الاجتماعية:</strong> لمواكبة التغيرات والتحديات المعاصرة والحفاظ على تماسك المجتمع.</li>
+                        </ul>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="trees" class="w-6 h-6 ml-3 text-amber-400"></i>د. التحديات البيئية:</h4>
+                        <ul class="list-disc list-inside space-y-1 mt-2 pr-4 text-gray-300">
+                            <li><strong class="text-amber-300">الشح المائي:</strong> من أبرز التحديات، وأسبابه شح الأمطار، تزايد عدد السكان، والاستخراج الجائر للمياه الجوفية. تسعى مشاريع مثل مشروع قناة البحرين ومشروع جر مياه الديسي لمواجهة هذا التحدي.</li>
+                            <li><strong class="text-amber-300">تلوث الهواء:</strong> من مصادره الثابتة (مثل الصناعات التحويلية كالأسمدة والإسمنت والفوسفات) والمتحركة (وسائط النقل المختلفة)، إضافة إلى المصادر الطبيعية كالعواصف الترابية.</li>
+                            <li><strong class="text-amber-300">التصحر:</strong> يهدد حوالي 91% من مساحة الأردن، ومن أسبابه الزحف العمراني العشوائي، التحطيب غير المسؤول، الرعي الجائر، وطبيعة المناخ الجاف.</li>
+                        </ul>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-bold gold-heading mb-2 flex items-center"><i data-lucide="book-open" class="w-6 h-6 ml-3 text-amber-400"></i>هـ. التحديات الثقافية:</h4>
+                        <ul class="list-disc list-inside space-y-1 mt-2 pr-4 text-gray-300">
+                            <li><strong>العولمة الثقافية:</strong> محاولات الدول المتقدمة لتوجيه الثقافات الأخرى نحو إطارها الخاص، مما يهدد الخصوصية الثقافية.</li>
+                            <li><strong>إحباط المثقف:</strong> ضعف قدرة المثقف على تحليل مشكلاته واقتراح حلول مناسبة لها.</li>
+                            <li><strong>تحديات اللغة العربية:</strong> ضعف استخدامها وتهديدها من اللغات الأخرى.</li>
+                            <li><strong>ارتفاع نسبة الأمية الثقافية والتكنولوجية:</strong> الأمية الثقافية تعني غياب النظرة الشاملة للكون والإنسان والحياة وضعف المعرفة العامة، بينما الأمية التكنولوجية هي ضعف القدرة على التعامل مع التقنية الحديثة.</li>
+                            <li><strong>ضعف القيم الروحية والأخلاقية:</strong> يؤثر على تماسك المجتمع وقدرته على مواجهة التحديات.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Start Button -->
+            <div class="text-center mt-12 fade-in" style="animation-delay: 1.4s;">
+                <button id="startQuizBtn" class="btn-primary">
+                    بدء الامتحان المحوسب (30 سؤال) <i data-lucide="zap" class="w-5 h-5 inline-block mr-2"></i>
+                </button>
+            </div>
+        </main>
+        
+        <!-- Quiz Section (Hidden by default) -->
+        <section id="quizSection" class="hidden mt-12 section-card p-6 md:p-10 fade-in">
+            <h2 class="text-3xl text-center gold-heading mb-8 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-8 h-8 ml-3 text-amber-400"></i>امتحان محوسب</h2>
+            <div id="quizProgress">
+                <div id="quizProgressBar"></div>
+            </div>
+            <div id="quizContainer" class="space-y-8">
+                <!-- Quiz questions will be injected here by JavaScript -->
+            </div>
+            <div class="text-center mt-10 space-x-4">
+                <button id="submitQuizBtn" class="btn-primary">
+                    إظهار النتيجة <i data-lucide="award" class="w-5 h-5 inline-block mr-2"></i>
+                </button>
+                <button id="restartQuizBtn" class="btn-primary hidden">
+                    إعادة الامتحان <i data-lucide="rotate-ccw" class="w-5 h-5 inline-block mr-2"></i>
+                </button>
+            </div>
+            <div id="quizResult" class="text-center mt-8 text-3xl font-bold hidden"></div>
+        </section>
+
+    </div>
+
+    <script>
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffd700" /* Gold color for particles */
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffa500", /* Orange for lines */
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Initialize Lucide icons
+        window.onload = function() {
+            lucide.createIcons();
+            // Trigger fade-in animations for content sections on load
+            const sections = document.querySelectorAll('.fade-in');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${0.2 * (index + 1)}s`;
+                section.style.animationPlayState = 'running';
+            });
+        };
+
+
+        const startQuizBtn = document.getElementById('startQuizBtn');
+        const quizSection = document.getElementById('quizSection');
+        const submitQuizBtn = document.getElementById('submitQuizBtn');
+        const restartQuizBtn = document.getElementById('restartQuizBtn');
+        const quizResult = document.getElementById('quizResult');
+        const quizContainer = document.getElementById('quizContainer');
+        const quizProgressBar = document.getElementById('quizProgressBar');
+
+        // Quiz Data - 30 questions based on the provided text
+        const quizData = [
+            {
+                question: "ما هي المعاهدة التي تُعتبر الأساس لولادة الدولة الوطنية عام 1648م؟",
+                options: ["معاهدة باريس", "معاهدة وستفاليا", "معاهدة فرساي", "معاهدة جنيف"],
+                answer: "معاهدة وستفاليا"
+            },
+            {
+                question: "متى كان أول استعمال رسمي لمفهوم الأمن الوطني؟",
+                options: ["1918م", "1947م", "1960م", "1776م"],
+                answer: "1947م"
+            },
+            {
+                question: "أي من التالي يُعتبر من دعائم تحقيق التقدم والتنمية الاقتصادية والاجتماعية والسياسية؟",
+                options: ["التبعية الاقتصادية", "الإعداد للأمن الوطني", "العزلة الدولية", "الانكماش الاجتماعي"],
+                answer: "الإعداد للأمن الوطني"
+            },
+            {
+                question: "أي أنواع الأمن يُعد الأكثر فعالية وأهمية وفقاً للملخص؟",
+                options: ["الأمن الاقتصادي", "الأمن الاجتماعي", "الأمن العسكري", "الأمن الثقافي"],
+                answer: "الأمن العسكري"
+            },
+            {
+                question: "أي من التالي ليس من مؤشرات قياس القوة العسكرية للدولة؟",
+                options: ["حجم القوات المسلحة", "التنمية البشرية", "مستوى التدريب والتسليح", "الأحلاف العسكرية"],
+                answer: "التنمية البشرية"
+            },
+            {
+                question: "ما هو البعد الاقتصادي الذي يُعنى بالتخلص من التبعية الاقتصادية؟",
+                options: ["البعد الداخلي", "البعد الاجتماعي", "البعد الخارجي", "البعد العسكري"],
+                answer: "البعد الخارجي"
+            },
+            {
+                question: "محاربة الفقر والبطالة تندرج ضمن أي بعد من أبعاد الأمن الاقتصادي؟",
+                options: ["الأبعاد الخارجية", "الأبعاد الداخلية", "الأبعاد السياسية", "الأبعاد الثقافية"],
+                answer: "الأبعاد الداخلية"
+            },
+            {
+                question: "الأمن الذي يُعنى بالحفاظ على المكونات الثقافية الأصلية في مواجهة التيارات الوافدة هو:",
+                options: ["الأمن السياسي", "الأمن الاقتصادي", "الأمن الاجتماعي", "الأمن الثقافي"],
+                answer: "الأمن الثقافي"
+            },
+            {
+                question: "يتطلب الأمن الوطني الشامل وجود نظام سياسي:",
+                options: ["استبدادي", "متوازن", "فوضوي", "مركزي فقط"],
+                answer: "متوازن"
+            },
+            {
+                question: "ما هو تعريف الأمن الوطني الأردني وفقاً للملخص؟",
+                options: ["السيطرة العسكرية على الإقليم", "التعبير السياسي والاجتماعي عن الحالة الحقيقية للمجتمع", "التبعية الاقتصادية الكاملة", "العزلة الثقافية عن العالم"],
+                answer: "التعبير السياسي والاجتماعي عن الحالة الحقيقية للمجتمع"
+            },
+            {
+                question: "أي من التالي ليس من أسس ومرتكزات الأمن الوطني الأردني؟",
+                options: ["منعة المجتمع الأردني", "ضمان أمن الشعب وحريته", "تحقيق الاستقرار النفسي للمواطن", "الاعتماد الكلي على المساعدات الخارجية"],
+                answer: "الاعتماد الكلي على المساعدات الخارجية"
+            },
+            {
+                question: "تأصيل مفهوم دولة المؤسسات يندرج ضمن أي من أولويات الأمن الوطني الأردني؟",
+                options: ["الأولويات الخارجية", "الأولويات الداخلية", "التحديات السياسية", "الأبعاد الثقافية"],
+                answer: "الأولويات الداخلية"
+            },
+            {
+                question: "إقامة الدولة الفلسطينية المستقلة تعد من أولويات الأمن الوطني الأردني على الصعيد:",
+                options: ["الداخلي", "الإقليمي", "الخارجي", "الاقتصادي"],
+                answer: "الخارجي"
+            },
+            {
+                question: "أي المؤسسات العسكرية التالية مسؤولة عن مقاومة التخريب الفكري والمادي ومكافحة التجسس؟",
+                options: ["مديرية الأمن العام", "دائرة المخابرات العامة", "قوات الدرك", "المديرية العامة للدفاع المدني"],
+                answer: "دائرة المخابرات العامة"
+            },
+            {
+                question: "متى تأسست المديرية العامة لقوات الدرك؟",
+                options: ["2000", "2005", "2007", "2010"],
+                answer: "2007"
+            },
+            {
+                question: "أي من التالي ليس من مهام القوات المسلحة (الجيش العربي) في تحقيق الأمن الوطني؟",
+                options: ["توفير الرعاية الصحية", "المشاركة في قوات حفظ السلام", "التصدي للتحديات البيئية", "دور في المشاريع التنموية الزراعية"],
+                answer: "التصدي للتحديات البيئية"
+            },
+            {
+                question: "أي من الوزارات التالية تساهم في تنمية وتطوير الصناعات المحلية وتحسين التجارة الخارجية؟",
+                options: ["وزارة المالية", "وزارة التخطيط والتعاون الدولي", "وزارة الصناعة والتجارة", "وزارة الزراعة"],
+                answer: "وزارة الصناعة والتجارة"
+            },
+            {
+                question: "الجهة الحكومية المختصة بالحد من ظاهرة الفقر هي:",
+                options: ["وزارة الصناعة والتجارة", "وزارة التنمية الاجتماعية", "وزارة المالية", "وزارة التخطيط"],
+                answer: "وزارة التنمية الاجتماعية"
+            },
+            {
+                question: "عام 2018، بلغ معدل البطالة في الأردن حوالي:",
+                options: ["12.5%", "15.0%", "18.4%", "20.1%"],
+                answer: "18.4%"
+            },
+            {
+                question: "حصل الأردن على أول قرض خارجي من بريطانيا عام:",
+                options: ["1970", "1978", "1985", "1990"],
+                answer: "1978"
+            },
+            {
+                question: "أي من التالي يعتبر من التحديات الاقتصادية المعاصرة التي تواجه الأردن؟",
+                options: ["إصلاح منظومة القيم الاجتماعية", "تطوير العلاقات مع العراق", "ضغط اللجوء على الموازنة", "الأمية الثقافية"],
+                answer: "ضغط اللجوء على الموازنة"
+            },
+            {
+                question: "الصراع الإقليمي الذي يشمل القضية الفلسطينية والخطر الصهيوني يندرج تحت أي تحدي؟",
+                options: ["التحديات الاقتصادية", "التحديات السياسية", "التحديات الاجتماعية", "التحديات الثقافية"],
+                answer: "التحديات السياسية"
+            },
+            {
+                question: "الفقر المطلق والفقر المدقع يعتبران من أي أنواع التحديات؟",
+                options: ["الاقتصادية", "السياسية", "الاجتماعية", "البيئية"],
+                answer: "الاجتماعية"
+            },
+            {
+                question: "كم تبلغ نسبة الأراضي المهددة بالتصحر في الأردن تقريباً؟",
+                options: ["60%", "75%", "85%", "91%"],
+                answer: "91%"
+            },
+            {
+                question: "أي من التالي ليس من أسباب الشح المائي في الأردن؟",
+                options: ["شح الأمطار", "تزايد عدد السكان", "الاستخراج الجائر للمياه الجوفية", "زيادة كفاءة الري"],
+                answer: "زيادة كفاءة الري"
+            },
+            {
+                question: "أي من التالي يُعد من مصادر تلوث الهواء في الأردن؟",
+                options: ["الألواح الشمسية", "وسائط النقل المختلفة", "الزراعة العضوية", "معالجة المياه العادمة"],
+                answer: "وسائط النقل المختلفة"
+            },
+            {
+                question: "ما هو المصطلح الذي يصف غياب النظرة الشاملة للكون والإنسان والحياة وضعف المعرفة العامة؟",
+                options: ["الأمية التكنولوجية", "العولمة الثقافية", "الأمية الثقافية", "إحباط المثقف"],
+                answer: "الأمية الثقافية"
+            },
+            {
+                question: "ضعف القيم الروحية والأخلاقية يعتبر تحدياً من أي نوع؟",
+                options: ["اقتصادي", "سياسي", "اجتماعي", "ثقافي"],
+                answer: "ثقافي"
+            },
+            {
+                question: "الاستراتيجية الوطنية لتنمية الموارد البشرية 2016-2025 تهدف إلى تعزيز:",
+                options: ["القدرات العسكرية", "القدرات البشرية", "القدرات الاقتصادية", "القدرات البيئية"],
+                answer: "القدرات البشرية"
+            },
+            {
+                question: "أي من المؤسسات التالية تضم سلطة المياه وسلطة وادي الأردن؟",
+                options: ["وزارة الزراعة", "وزارة الطاقة والثروة المعدنية", "وزارة المياه والري", "وزارة الصناعة والتجارة"],
+                answer: "وزارة المياه والري"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let selectedAnswers = [];
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function buildQuiz() {
+            quizContainer.innerHTML = ''; // Clear previous questions
+            shuffleArray(quizData); // Shuffle questions
+
+            quizData.forEach((data, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question-block', 'rounded-lg', 'section-card', 'mb-6');
+                questionDiv.setAttribute('id', `question-${index}`);
+
+                const questionP = document.createElement('p');
+                questionP.classList.add('text-xl', 'mb-4', 'font-semibold', 'text-gray-200');
+                questionP.textContent = `${index + 1}. ${data.question}`;
+                questionDiv.appendChild(questionP);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.classList.add('space-y-3');
+                
+                data.options.forEach(option => {
+                    const label = document.createElement('label');
+                    label.classList.add('flex', 'items-center', 'p-4', 'rounded-lg', 'cursor-pointer', 'quiz-option');
+                    
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = `question${index}`;
+                    input.value = option;
+                    input.classList.add('hidden'); // Hide the actual radio button
+                    
+                    const customRadio = document.createElement('span');
+                    customRadio.classList.add('radio-custom');
+                    
+                    label.appendChild(input);
+                    label.appendChild(customRadio);
+                    label.append(option);
+                    
+                    label.addEventListener('click', () => {
+                        document.querySelectorAll(`input[name="question${index}"]`).forEach(radio => {
+                            radio.parentElement.classList.remove('selected');
+                        });
+                        label.classList.add('selected');
+                        selectedAnswers[index] = option; // Store selected answer
+                        updateProgressBar();
+                    });
+                    
+                    optionsDiv.appendChild(label);
+                });
+
+                questionDiv.appendChild(optionsDiv);
+                quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        function updateProgressBar() {
+            let answeredQuestions = 0;
+            for (let i = 0; i < quizData.length; i++) {
+                if (selectedAnswers[i] !== undefined) {
+                    answeredQuestions++;
+                }
+            }
+            const progressPercentage = (answeredQuestions / quizData.length) * 100;
+            quizProgressBar.style.width = `${progressPercentage}%`;
+            quizProgressBar.textContent = `${answeredQuestions}/${quizData.length}`;
+        }
+
+        startQuizBtn.addEventListener('click', () => {
+            document.getElementById('summaryContent').classList.add('hidden');
+            quizSection.classList.remove('hidden');
+            window.scrollTo({ top: quizSection.offsetTop, behavior: 'smooth' });
+            selectedAnswers = new Array(quizData.length).fill(undefined); // Reset selected answers
+            updateProgressBar();
+            buildQuiz();
+            submitQuizBtn.disabled = false;
+            submitQuizBtn.style.opacity = '1';
+            restartQuizBtn.classList.add('hidden');
+            quizResult.classList.add('hidden');
+            quizResult.classList.remove('text-green-400', 'text-red-400'); // Clear previous result colors
+            lucide.createIcons(); // Re-render icons if needed
+        });
+
+        submitQuizBtn.addEventListener('click', () => {
+            let score = 0;
+            quizData.forEach((data, index) => {
+                const selectedOption = selectedAnswers[index];
+                const questionElement = document.getElementById(`question-${index}`);
+                const options = questionElement.querySelectorAll('.quiz-option');
+                const radioInputs = questionElement.querySelectorAll('input[type="radio"]');
+
+                // Disable all radio buttons for this question after submission
+                radioInputs.forEach(input => {
+                    input.disabled = true;
+                    input.parentElement.style.cursor = 'default'; // Remove pointer cursor
+                });
+
+                options.forEach(optionLabel => {
+                    // Check if this option is the correct answer
+                    if (optionLabel.textContent.trim() === data.answer) {
+                        optionLabel.classList.add('correct'); // Mark correct answer
+                        optionLabel.classList.remove('selected'); // Ensure correct isn't also 'selected'
+                    } 
+                    // Check if this option was the user's selected answer AND it was incorrect
+                    else if (optionLabel.textContent.trim() === selectedOption && selectedOption !== data.answer) {
+                        optionLabel.classList.add('incorrect'); // Mark incorrect selected answer
+                        optionLabel.classList.remove('selected'); // Ensure incorrect isn't also 'selected'
+                    }
+                });
+
+                if (selectedOption === data.answer) {
+                    score++;
+                }
+            });
+
+            quizResult.textContent = `نتيجتك هي: ${score} من ${quizData.length}`;
+            quizResult.classList.remove('hidden');
+            if (score > (quizData.length / 2)) {
+                quizResult.classList.add('text-green-400');
+            } else {
+                quizResult.classList.add('text-red-400');
+            }
+            submitQuizBtn.disabled = true;
+            submitQuizBtn.style.opacity = '0.5';
+            restartQuizBtn.classList.remove('hidden');
+            window.scrollTo({ top: quizResult.offsetTop, behavior: 'smooth' });
+        });
+
+        restartQuizBtn.addEventListener('click', () => {
+            document.getElementById('summaryContent').classList.remove('hidden');
+            quizSection.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of summary
+            startQuizBtn.parentElement.classList.remove('hidden'); // Show start quiz button again
+            // Reset all quiz elements
+            quizContainer.innerHTML = '';
+            quizResult.textContent = '';
+            quizResult.classList.add('hidden');
+            quizProgressBar.style.width = '0%';
+            quizProgressBar.textContent = '';
+            selectedAnswers = [];
+            currentQuestionIndex = 0;
+        });
+
+        // Initialize quiz on page load
+        buildQuiz(); 
+    </script>
+</body>
+</html>
